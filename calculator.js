@@ -14,7 +14,7 @@ function calc(x, y, symbol) {
     if (symbol === "+") {
         return addition(x, y);
     }
-    if (symbol === "*" || symbol === "x") {
+    if (symbol === "*" || symbol === "&times") {
         return multiplication(x, y);
     }
     if (symbol === "/") {
@@ -80,7 +80,9 @@ document.addEventListener("DOMContentLoaded", function () {
         var symbol = event.target;
         finalList.push(symbol.value);
         miniDisplay = miniDisplay + symbol.value;
-        console.log(miniDisplay);
+        console.log("miniDisplay: ", miniDisplay);
+        var mini = document.querySelector('.miniDisplay');
+        mini.innerText = miniDisplay;
     };
     // Operators functionality
     (_p = document.querySelector('#plus')) === null || _p === void 0 ? void 0 : _p.addEventListener("click", handleOperator);

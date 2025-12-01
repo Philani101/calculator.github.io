@@ -18,7 +18,7 @@ function calc(x: number, y: number, symbol: string): number {
   if (symbol === "+") {
     return addition(x, y);
   }
-  if (symbol === "*" || symbol === "x") {
+  if (symbol === "*" || symbol === "&times") {
     return multiplication(x, y);
   }
   if (symbol === "/") {
@@ -92,7 +92,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const symbol = event.target as HTMLInputElement;
     finalList.push(symbol.value);
     miniDisplay = miniDisplay + symbol.value;
-    console.log(miniDisplay);
+    console.log("miniDisplay: ", miniDisplay);
+    let mini = document.querySelector('.miniDisplay') as HTMLInputElement;
+    mini.innerText = miniDisplay;
   };
 
   // Operators functionality
@@ -105,6 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelector('#equalto')?.addEventListener("click", (event: Event) => {
     event.preventDefault();
     console.log("clicked =");
+    
     
     if (tempNumber !== "") {
       const num = parseFloat(tempNumber);
