@@ -1,48 +1,125 @@
-*{
-    font-family: 'Times New Roman', 'Times', 'serif';
-    padding: 12px;
-    background-color: rgb(226, 226, 226);
-    
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-body{
+
+body {
+    font-family: 'Times New Roman', Times, serif;
     display: flex;
     justify-content: center;
-}
-.displayText{
-    background-color: inherit;
-    width: 90%;
-    font-size: larger;
-    font-weight: bold;
-    direction: rtl;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(226, 226, 226);
 }
 
-.inputScreen{
-    height: 50px;
-    width: 92%;
-    background-color: beige;
-}
-.button-row-5{
-    display: flex;
-}
-.equalBtn{
-    flex-grow: 1;
-    border-radius: 0%;
-    background-color: beige;
-}
-
-.calcBody{
-    height: fit-content;
-    width: fit-content;
+.calcBody {
     background-color: whitesmoke;
-    float: center;
-    
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 320px;
 }
 
-.btn, .btnNum{
+.inputScreen {
     background-color: beige;
-    border-radius: 46%;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.displayText {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: right;
+    direction: ltr;
+    outline: none;
+    color: #333;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.button-row,
+.button-row-5 {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.btn,
+.btnNum,
+.equalBtn {
+    background-color: beige;
+    border: 2px solid #ccc;
+    border-radius: 50%;
     min-height: 60px;
     min-width: 60px;
     font-weight: bold;
-    
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex: 1;
+}
+
+.btn:hover,
+.btnNum:hover,
+.equalBtn:hover {
+    background-color: #f5e6c8;
+    transform: scale(1.05);
+}
+
+.btn:active,
+.btnNum:active,
+.equalBtn:active {
+    transform: scale(0.95);
+    background-color: #e6d4a8;
+}
+
+.equalBtn {
+    border-radius: 30px;
+    background-color: #ffd700;
+    border-color: #daa520;
+}
+
+.equalBtn:hover {
+    background-color: #ffed4e;
+}
+
+.btn {
+    background-color: #f0e68c;
+    font-size: 20px;
+}
+
+.btnNum {
+    background-color: #fff8dc;
+}
+
+#clear {
+    background-color: #ff6b6b;
+    color: white;
+    border-color: #e63946;
+}
+
+#clear:hover {
+    background-color: #ff8787;
+}
+
+#delete {
+    background-color: #ffa500;
+    color: white;
+    border-color: #ff8c00;
+}
+
+#delete:hover {
+    background-color: #ffb733;
 }
