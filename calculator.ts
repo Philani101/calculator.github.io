@@ -263,7 +263,7 @@ document.addEventListener("DOMContentLoaded", () => {
       prevAnswer = roundedResult.toString();
       
       // Reset for next calculation
-      tempNumber = "";
+      tempNumber = display.value;
       finalList = [];
       miniDisplay = "";
       

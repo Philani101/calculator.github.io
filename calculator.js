@@ -219,7 +219,7 @@ document.addEventListener("DOMContentLoaded", function () {
             display.value = roundedResult.toString();
             prevAnswer = roundedResult.toString();
             // Reset for next calculation
-            tempNumber = "";
+            tempNumber = display.value;
             finalList = [];
             miniDisplay = "";
         }
